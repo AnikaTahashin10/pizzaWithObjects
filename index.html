@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Order Pizza</title>
+</head>
+<body>
+    <div class="background"><h1>CUSTOMIZE YOUR PIZZA</h1></div>
+    <div class="form-container">
+        <form id="pizza-order-form">
+            <div class="forms2">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <label for="name">Name: </label>
+                    <input type="text" id="name" required>
+                </fieldset>
+                <fieldset>
+                    <legend>Pizza size</legend>
+                    <div>
+                        <input type="radio" id="size2" name="size" value="7.50" data-price="7.50" required>
+                        <label for="size2">2 Servings (€7.50)</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="size4" name="size" value="10.50" data-price="10.50" required>
+                        <label for="size4">4 Servings (€10.50)</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="size6" name="size" value="12.50" data-price="12.50" required>
+                        <label for="size6">6 Servings (€12.50)</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="size8" name="size" value="15.50" data-price="15.50" required>
+                        <label for="size8">8 Servings (€15.50)</label>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Crust</legend>
+                    <input type="radio" name="crust" value="1" required />Thin Crust 
+                    <input type="radio" name="crust" value="2" />Thick Crust
+                    <input type="radio" name="crust" value="3" />Stuffed crust
+                </fieldset>
+                <fieldset>
+                    <legend>Sauces</legend>
+                    <input type="radio" name="sauce" value="1" required />Pizza Sauce
+                    <input type="radio" name="sauce" value="2" />BBQ Sauce
+                    <input type="radio" name="sauce" value="3" />Garlic Sauce
+                </fieldset>
+            </div>
+            <div class="forms2">
+                <fieldset>
+                    <legend>Choose Toppings - $0.50 per topping over 4</legend>
+                    <div class="forms2">
+                        <div>
+                            <input type="checkbox" name="topping" value="1" /> Anchovies
+                        </div>
+                    <div>
+                            <input type="checkbox" name="topping" value="2" /> Bacon
+                        </div>
+                    <div>
+                            <input type="checkbox" name="topping" value="3" /> Ham
+                        </div>
+                    <div>
+                            <input type="checkbox" name="topping" value="4" /> Pepperoni
+                        </div>
+                    <div>
+                            <input type="checkbox" name="topping" value="5" /> Salami
+                        </div>
+                    <div>
+                            <input type="checkbox" name="topping" value="6" /> Sausage
+                        </div>
+                    <div>
+                            <input type="checkbox" name="topping" value="7" /> Broccoli
+                        </div>
+                    <div>
+                            <input type="checkbox" name="topping" value="8" /> Green Olives
+                        </div>
+                            <div>
+                            <input type="checkbox" name="topping" value="9" /> Green Peppers
+                        </div>
+                    <div>
+                            <input type="checkbox" name="topping" value="10" /> Mushrooms
+                        </div>
+                    <div>
+                            <input type="checkbox" name="topping" value="11" /> Red Onions
+                        </div>
+                    <div>
+                            <input type="checkbox" name="topping" value="12" /> Roasted Garlic
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Delivery options</legend>
+                    <select name="delivery" id="delivery-select" required>
+                        <option value="">Select...</option>
+                        <option value="eat-in">Eat-in</option>
+                        <option value="pick-up">Pick up</option>
+                        <option value="delivery">Delivery (+ €5.00)</option>
+                    </select>
+                </fieldset>
+                <fieldset>
+                    <legend>Special Instructions</legend>
+                    <textarea name="instructions" rows="3" cols="42"></textarea>
+                </fieldset>
+                <div id="total-price">Total Price: €0.00</div>
+                <input type="submit" value="PLACE YOUR ORDER" />
+                <input type="reset" value="START OVER" />
+            </div>
+        </form>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
